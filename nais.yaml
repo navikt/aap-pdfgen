@@ -1,0 +1,24 @@
+apiVersion: "nais.io/v1alpha1"
+kind: "Application"
+metadata:
+  name: aap-pdfgen
+  namespace: aap
+  labels:
+    team: aap
+spec:
+  image: {{ image }}
+  replicas:
+    min: 2
+    max: 4
+    cpuThresholdPercentage: 80
+  liveness:
+    path: /is_alive
+  readiness:
+    path: /is_alive
+  prometheus:
+    enabled: true
+    path: /prometheus
+  accessPolicy:
+    inbound:
+      rules:
+        - application: tbd
