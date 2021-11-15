@@ -18,6 +18,3 @@ spec:
   prometheus:
     enabled: true
     path: /prometheus
-  accessPolicy:
-    inbound:
-      rules:
