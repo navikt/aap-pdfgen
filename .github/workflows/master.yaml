@@ -13,7 +13,7 @@ jobs:
       name: Build and push Docker container
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v1
+        - uses: actions/checkout@v2
         - name: Build and publish Docker image
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,9 +28,9 @@ jobs:
       if: github.ref == 'refs/heads/master'
       runs-on: ubuntu-latest
       steps:
-        -   uses: actions/checkout@v1
+        -   uses: actions/checkout@v2
         -   uses: nais/deploy/actions/deploy@v1
             env:
-               APIKEY: ${{ secrets.NAIS_DEPLOY_API_KEY }}
+               APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
                CLUSTER: dev-gcp
                RESOURCE: nais.yaml
