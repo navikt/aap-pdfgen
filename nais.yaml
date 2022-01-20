@@ -1,7 +1,7 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: aap-pdfgen
+  name: pdfgen
   namespace: aap
   labels:
     team: aap
@@ -9,7 +9,7 @@ spec:
   accessPolicy:
     inbound:
       rules:
-        - application: aap-soknad-konsument
+        - application: soknad-konsument
   image: {{ image }}
   replicas:
     min: 2
