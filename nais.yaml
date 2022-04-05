@@ -9,7 +9,7 @@ spec:
   accessPolicy:
     inbound:
       rules:
-        - application: soknad-konsument
+        - application: soknad-api
   image: {{ image }}
   replicas:
     min: 2
