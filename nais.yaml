@@ -10,6 +10,8 @@ spec:
     inbound:
       rules:
         - application: soknad-api
+        - application: soknad-konsument
+
   image: {{ image }}
   replicas:
     min: 2
