@@ -1,6 +1,24 @@
 {
-  "fødselsnummer": "123456 78901",
-  "fornavn": "Planet",
-  "mellomnavn": "A",
-  "etternavn": "Planetus"
+  "søknad":{
+    "startdato":"2022-04-08",
+    "ferie":{
+      "dager":21
+    },
+    "kontaktinformasjon":{
+      "epost":"a@b.com",
+      "telefonnummer":"22222222"
+    },
+    "yrkesskadeType":"JA",
+    "arbeidsgiverGodtgjørelseType":"ENGANGSBELØP",
+    "tilleggsopplysninger":"JADDA"
+  },
+  "søker":{
+    "navn":{
+      "fornavn":"A",
+      "mellomnavn":"B",
+      "etternavn":"C"
+    },
+    "fødselsnummer":"03016536325",
+    "fødseldato":"2022-04-08"
+  }
 }
