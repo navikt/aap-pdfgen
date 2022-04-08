@@ -1,22 +1,24 @@
- "søknad":{
-    "startdato":"2022-04-08",
-    "ferie":{
-      "dager":21
+{
+    "søknad":{
+        "startdato":"2022-04-08",
+        "ferie":{
+            "dager":21
+        },
+        "kontaktinformasjon":{
+            "epost":"a@b.com",
+            "telefonnummer":"22222222"
+        },
+        "yrkesskadeType":"JA",
+        "arbeidsgiverGodtgjørelseType":"ENGANGSBELØP",
+        "tilleggsopplysninger":"JADDA"
     },
-    "kontaktinformasjon":{
-      "epost":"a@b.com",
-      "telefonnummer":"22222222"
-    },
-    "yrkesskadeType":"JA",
-    "arbeidsgiverGodtgjørelseType":"ENGANGSBELØP",
-    "tilleggsopplysninger":"JADDA"
-  },
-  "søker":{
-    "navn":{
-      "fornavn":"A",
-      "mellomnavn":"B",
-      "etternavn":"C"
-    },
-    "fødselsnummer":"03016536325",
-    "fødseldato":"2022-04-08"
-  }
+    "søker":{
+        "navn":{
+            "fornavn":"A",
+            "mellomnavn":"B",
+            "etternavn":"C"
+        },
+        "fødselsnummer":"03016536325",
+        "fødseldato":"2022-04-08"
+    }
+}
