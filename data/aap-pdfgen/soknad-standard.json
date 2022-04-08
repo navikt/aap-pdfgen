@@ -1,5 +1,4 @@
-{
-  "søknad":{
+ "søknad":{
     "startdato":"2022-04-08",
     "ferie":{
       "dager":21
@@ -21,4 +20,3 @@
     "fødselsnummer":"03016536325",
     "fødseldato":"2022-04-08"
   }
-}
