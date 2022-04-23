@@ -1,10 +1,15 @@
 {
-  "fødselsnummer": "123456 78901",
-  "fornavn": "Planet",
-  "mellomnavn": "A",
-  "etternavn": "Planetus",
-  "dato": "09.02.2055",
-  "land": "Australia",
-  "fom": "11.11.2021",
-  "tom": "05.05.2024"
+  "fødselsnummer":"01010111111",
+  "landKode":"SE",
+  "land":"Sverige",
+  "navn":{
+    "fornavn":"Ole",
+    "mellomnavn":"B",
+    "etternavn":"Olsen"
+  },
+  "periode":{
+    "fom":"2022-04-23",
+    "tom":"2022-04-24"
+  },
+  "dato":"2022-04-23"
 }

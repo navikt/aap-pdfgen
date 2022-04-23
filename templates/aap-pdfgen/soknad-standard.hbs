@@ -122,14 +122,16 @@
                 <div>
                     <div class="info-desc">For- og mellomnavn</div>
                     <div class="info-data">
-                        <p>{{søker.navn.fornavn}} {{søker.navn.mellomnavn}}</p>
+                    {{#with søker.navn}}
+                        <p>{{fornavn}} {{mellomnavn}}</p>
                     </div>
                 </div>
                 <div>
                     <div class="info-desc">Etternavn</div>
                     <div class="info-data">
-                        <p>{{søker.navn.etternavn}}</p>
+                        <p>{{etternavn}}</p>
                     </div>
+                     {{/with}}
                 </div>
             </div>
             <div class="single-row">
