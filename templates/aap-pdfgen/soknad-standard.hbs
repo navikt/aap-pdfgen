@@ -115,6 +115,22 @@
                          <p>{{søknad.startdato}}</p>
                     </div>
              </div>
+            {{#if startdato.hvorfor}}
+            <div class="single-row">
+                <div class="info-desc">Hvorfor søker du tilbake i tid?</div>
+                <div class="info-data">
+                    <p>{{startdato.hvorfor}}</p>
+                </div>
+            </div>
+            {{/if}}
+            {{#if startdato.beskrivelse}}
+                <div class="single-row">
+                    <div class="info-desc">Beskrivelse av årsal</div>
+                    <div class="info-data">
+                        <p>{{startdato.beskrivelser}}</p>
+                    </div>
+                </div>
+            {{/if}}
          </div>
         <div class="personInfo info">
             <h3>Personlige opplysninger</h3>
