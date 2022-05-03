@@ -6,7 +6,7 @@
     <style>
         * {
             font-family: "Source Sans Pro", SourceSansPro, Source_Sans_Pro,
-                ArialSystem, sans-serif;
+            ArialSystem, sans-serif;
         }
         h1 {
             font-style: normal;
@@ -77,7 +77,7 @@
         @page {
             @bottom-right {
                 font-family: "Source Sans Pro", SourceSansPro, Source_Sans_Pro,
-                    ArialSystem, sans-serif;
+                ArialSystem, sans-serif;
                 font-size: 15px;
                 content: "side "counter(page) " av "counter(pages);
             }
@@ -99,67 +99,57 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="header">
-            <h1>Søknad om AAP</h1>
-        </div>
-        <div class="subheader">
-            <p>Sendt inn digitalt via nav.no</p>
-            <p>{{dato}}</p>
-        </div>
-        <div class="personInfo info">
-            <h3>Startdato</h3>
-            <div class="single-row">
-               <div class="info-desc">Fra hvilken dato ønsker du å søke arbeidsavklaringspenger?</div>
-                    <div class="info-data">
-                         <p>{{søknad.startdato}}</p>
-                    </div>
-             </div>
-            {{#if startdato.hvorfor}}
-            <div class="single-row">
-                <div class="info-desc">Hvorfor søker du tilbake i tid?</div>
-                <div class="info-data">
-                    <p>{{startdato.hvorfor}}</p>
-                </div>
+<div class="main">
+    <div class="header">
+        <h1>Søknad om AAP</h1>
+    </div>
+    <div class="subheader">
+        <p>Sendt inn digitalt via nav.no</p>
+        <p>{{dato}}</p>
+    </div>
+    <div class="personInfo info">
+        <h3>Startdato</h3>
+        <div class="single-row">
+            <div class="info-desc">Fra når</div>
+            <div class="info-data">
+                <p>{{søknad.startdato.fom}}</p>
             </div>
-            {{/if}}
-            {{#if startdato.beskrivelse}}
-                <div class="single-row">
-                    <div class="info-desc">Beskrivelse av årsal</div>
-                    <div class="info-data">
-                        <p>{{startdato.beskrivelser}}</p>
-                    </div>
-                </div>
-            {{/if}}
-         </div>
-        <div class="personInfo info">
-            <h3>Personlige opplysninger</h3>
-            <div class="double-row">
-                <div>
-                    <div class="info-desc">For- og mellomnavn</div>
-                    <div class="info-data">
-                    {{#with søker.navn}}
-                        <p>{{fornavn}} {{mellomnavn}}</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="info-desc">Etternavn</div>
-                    <div class="info-data">
-                        <p>{{etternavn}}</p>
-                    </div>
-                     {{/with}}
-                </div>
+            <div class="info-desc">Begrunnelse</div>
+               <div class="info-data">
+                   <p>{{søknad.startdato.beskrivelse}}</p>
+               </div>
+            <div class="info-desc">Hvorfor</div>
+            <div class="info-data">
+                <p>{{søknad.startdato.hvorfor}}</p>
             </div>
-            <div class="single-row">
-                <div class="info-desc">Fødselsnummer</div>
-                <div class="info-data">
-                    <p>{{søker.fødselsnummer}}</p>
-                </div>
-            </div>
-            <hr class="colored-line"/>
-            <h3>Søknadsopplysninger</h3>
         </div>
     </div>
+    <div class="personInfo info">
+        <h3>Personlige opplysninger</h3>
+        <div class="double-row">
+            <div>
+                <div class="info-desc">For- og mellomnavn</div>
+                <div class="info-data">
+                    <p>{{søker.navn.fornavn}} {{søker.navn.mellomnavn}}</p>
+                </div>
+            </div>
+            <div>
+                <div class="info-desc">Etternavn</div>
+                <div class="info-data">
+                    <p>{{søker.navn.etternavn}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="single-row">
+            <div class="info-desc">Fødselsnummer</div>
+            <div class="info-data">
+                <p>{{søker.fødselsnummer}}</p>
+            </div>
+        </div>
+        <hr class="colored-line"/>
+        <h3>Søknadsopplysninger</h3>
+    </div>
+</div>
 </body>
 
 </html>
