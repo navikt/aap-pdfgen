@@ -1,0 +1,408 @@
+<style>
+
+    @page {
+        size: A4 portrait;
+        margin: 1cm 0.3cm 0.5cm;
+        padding-bottom: 1cm;
+
+        @bottom-left {
+            content: element(footer);
+        }
+    }
+
+    @page :first {
+        margin-top: 0;
+        @top-left {
+            content: element(header);
+        }
+    }
+
+    * {
+        font-family: "Source Sans Pro";
+    }
+
+    img {
+        image-rendering: pixelated; /* Required for PDF/A-compliance */
+    }
+
+    h1 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        font-family: "Source Sans Pro";
+    }
+
+    h2 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 14px;
+        font-family: "Source Sans Pro";
+    }
+
+    p.inline {
+        display: inline-block;
+    }
+
+    p.korrigert {
+        color: #ba3a26;
+        font-weight: bold;
+    }
+
+    p.header__tittel {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    #footer {
+        position: running(footer);
+        font-size: 12px;
+        margin-top: -25px;
+        padding-left: 0.6cm;
+    }
+
+    .sidetall {
+        float: right;
+    }
+
+    #pagenumber:before {
+        content: counter(page);
+    }
+
+    #pagecount:before {
+        content: counter(pages)
+    }
+
+    #header {
+        background: rgb(193, 181, 208);
+        padding: 0cm 0.7cm;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px;
+        font-family: "Source Sans Pro";
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .title {
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        left: 100px;
+    }
+
+    .navlogo {
+        display: inline-block;
+        padding-top: 15px;
+        padding-bottom: 12px;
+        margin-left: 3px;
+        width: 48px;
+    }
+
+    .container {
+        margin: 0cm 0.7cm;
+        height: 850px;
+    }
+
+    .personinfo {
+        position: relative;
+        top: 25px;
+    }
+
+    .navn {
+        font-weight: bold;
+        font-size: 16px;
+        width: 350px;
+    }
+
+    .id {
+        width: 430px;
+        margin-bottom: 30px;
+    }
+
+    .personikon {
+        display: inline-block;
+        width: 32px;
+        margin-right: 8px;
+        margin-left: 3px;
+    }
+
+    .vedleggikon {
+        float:left;
+        width: 15px;
+        margin-top: 0px;
+        padding-top: 5px;
+        margin-right: 8px;
+        margin-left: 10px;
+    }
+
+    .persontekst {
+        display: inline-block;
+        width: 667px;
+    }
+
+    .sendt {
+        display: inline-block;
+        float: right;
+        width: 145px;
+        font-size: 14px;
+    }
+
+    .persontekst__personalia {
+        display: inline-block;
+    }
+
+    .persontekst__sidetopp {
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    .sporsmalcontainer {
+        position: relative;
+        top: 50px;
+    }
+
+    .svarcontainer {
+        position: relative;
+        left: 2px;
+    }
+
+    .svar {
+        margin-top: 4px;
+        width: 90%;
+        font-size: 14px;
+        font-family: "Source Sans Pro";
+    }
+
+    .svar--perioder {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 3px;
+
+    }
+
+    .svar--checkbox {
+        display: inline-block;
+    }
+
+    .checkbox {
+        vertical-align: top;
+        width: 13px;
+        margin: -3px 5px 0px 1px;
+    }
+
+    .hovedsporsmal {
+        page-break-inside: avoid;
+        margin-bottom: 1em;
+    }
+
+    .tabellcontainer {
+        page-break-inside: avoid !important;
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .gruppecontainer {
+        margin: 10px 0 10px 0;
+    }
+
+    .gruppelistecontainer {
+        margin: 20px 0 20px 0;
+        padding-left: 20px;
+    }
+
+    .sporsmal .sporsmal {
+        margin-left: 10px;
+    }
+
+    .sporsmalstekst {
+        font-weight: bold;
+    }
+
+    .venstre {
+        margin-right: 10px;
+        float: left;
+    }
+
+    ul {
+        font-family: "Source Sans Pro";
+        font-size: 14px;
+        list-style-image: url("{{ image "vedlegg.png" }}");
+    }
+
+    ul li {
+        margin-bottom: 5px;
+        list-style: square;
+    }
+
+    ul:last-child {
+        margin-bottom: 10px;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+        padding-bottom: 1.5em;
+    }
+
+    td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    .felt {
+        margin-bottom: 10px;
+        float: left;
+        display: block;
+    }
+
+    .underspm__elementer {
+        padding-left: 10px;
+    }
+
+    .oppsummeringsliste {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .feltoppsummering {
+        margin-bottom: 1rem;
+    }
+
+    .typo-etikett-liten {
+        font-size: .875rem;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+    }
+
+    .typo-element-feltoppsummering__verdi {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+    }
+
+    .blokk-m {
+        margin-bottom: 10px;
+    }
+
+    .blokk-m:last-child {
+        margin-bottom: 0;
+    }
+
+    .textWithLabel {
+        padding: 2px 0;
+    }
+
+    .typo-etikett-liten {
+        margin: 0;
+        font-family: 'Source Sans Pro';
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .textWithLabel__label {
+        color: #79706a;
+    }
+
+    .typo-element {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .textWithLabel__text {
+        margin-top: 8px !important;
+    }
+
+    .countryListElement__nameAndDate {
+        width: 100%;
+    }
+
+    .rightCol {
+        width: 50%;
+        float: right;
+        display: block;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    .leftCol {
+        width: 50%;
+        float: left;
+        padding: 0;
+        text-align: left;
+        /*background-color: #5da4d9;*/
+        display: block;
+    }
+
+    .fritekst {
+        float: left;
+        display: block;
+        width: 100%;
+    }
+
+    .avoid-page-break {
+        page-break-inside: avoid !important;
+    }
+
+    #temacontainer {
+        position: relative;
+        top: 60px;
+    }
+
+    .tema {
+        margin-top: 30px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .tema h2:first-child{
+        margin-top:0;
+    }
+
+    .tema h2 {
+        margin-bottom: 10px;
+    }
+
+    .element {
+        width: 100%;
+        display: block;
+    }
+
+    .element-overskrift {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .blokk {
+        width: 100%;
+        display: block;
+        float: left;
+    }
+
+    .clear {
+        clear: left;
+    }
+
+    .temacontainer {
+        width: 100%;
+    }
+
+
+</style>

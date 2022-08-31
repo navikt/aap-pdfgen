@@ -1,0 +1,557 @@
+{
+  "søker": {
+    "id": "1992-08-31",
+    "navn": "Fornavn Fra Oppslag"
+  },
+  "mottattdato": {
+    "beskrivelse": "Sendt til NAV",
+    "datotid": "31.08.2022 12:13"
+  },
+  "temaer": [
+    {
+      "type": "TEMA",
+      "overskrift": "Startdato",
+      "underblokker": [
+        {
+          "type": "GRUPPE",
+          "overskrift": "Fritekst - Ønsker startdato tilbake i tid",
+          "tabellrader": [
+            {
+              "type": "FRITEKST",
+              "tekst": "tjthgjtjyjtyjghj gfh gfhhgf ghg fdgdfg gh"
+            }
+          ]
+        },
+        {
+          "type": "FELT",
+          "felt": "Planlegger du å ta ferie før startdato på AAP?",
+          "verdi": "Ja"
+        },
+        {
+          "type": "FELT",
+          "felt": "Vet du når du skal ta ut ferie?",
+          "verdi": "Ja"
+        },
+        {
+          "type": "FELT",
+          "felt": "Periode",
+          "verdi": "Fra 2022-08-01T22:00:00.000Z til 2022-08-30T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Tilknytning til Norge",
+      "underblokker": [
+        {
+          "type": "FELT",
+          "felt": "Har du bodd sammenhengende i Norge de fem siste årene?",
+          "verdi": "Ja"
+        },
+        {
+          "type": "FELT",
+          "felt": "Har du jobbet utenfor Norge de fem siste årene?",
+          "verdi": "Ja"
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Utenlandsopphold",
+          "tabellrader": [
+            {
+              "type": "GRUPPELISTE",
+              "overskrift": "",
+              "tabellrader": [
+                {
+                  "type": "TABELLRAD",
+                  "venstretekst": "Land",
+                  "høyretekst": "AF:Afghanistan"
+                },
+                {
+                  "type": "TABELLRAD",
+                  "venstretekst": "Periode",
+                  "høyretekst": "Fra 15.08.2022 til 31.08.2022"
+                },
+                {
+                  "type": "TABELLRAD",
+                  "venstretekst": "Jobbet du i dette landet i denne perioden?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Yrkesskade",
+      "underblokker": [
+        {
+          "type": "FELT",
+          "felt": "Har du en yrkessykdom eller yrkesskade som påvirker hvor mye du kan jobbe?",
+          "verdi": "Ja"
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Registrerte behandlere",
+      "underblokker": [
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Type",
+              "høyretekst": "FASTLEGE"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Kategori",
+              "høyretekst": "LEGE"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Nina Unni Borge"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Kontor",
+              "høyretekst": "ASKØY KOMMUNE SAMFUNNSMEDISINSK AVD ALMENNLEGETJENESTEN"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Adresse",
+              "høyretekst": "Kleppeveien 17, 5300 KLEPPESTØ"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Telefon",
+              "høyretekst": "56 15 83 10"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Er informasjonen om fastlegen din riktig?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Andre behandlere",
+      "underblokker": [
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Tor Idland"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Kontor",
+              "høyretekst": "kontorkontoretkonotr"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Adresse",
+              "høyretekst": "Ivan undefined, 0101 bnvn"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Telefon",
+              "høyretekst": "99999997"
+            }
+          ]
+        },
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Geir gsdfkgj"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Kontor",
+              "høyretekst": "kontorkontoret"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Adresse",
+              "høyretekst": "Ivan undefined, 0123 oslo"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Telefon",
+              "høyretekst": "99999997"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Barn",
+      "underblokker": [
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Barn Nummer En"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Fødselsdato",
+              "høyretekst": "2021-08-30"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Mottar barnet barnepensjon?",
+              "høyretekst": "Ja"
+            }
+          ]
+        },
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Barn Nummer To"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Fødselsdato",
+              "høyretekst": "2020-08-30"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Mottar barnet barnepensjon?",
+              "høyretekst": "Nei"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Har barnet årlig inntekt over 111 477kr?",
+              "høyretekst": "Ja"
+            }
+          ]
+        },
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Barn Nummer Tre"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Fødselsdato",
+              "høyretekst": "2019-08-30"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Mottar barnet barnepensjon?",
+              "høyretekst": "Ja"
+            }
+          ]
+        },
+        {
+          "type": "GRUPPELISTE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Barn Nummer Fire"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Fødselsdato",
+              "høyretekst": "2018-08-30"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Mottar barnet barnepensjon?",
+              "høyretekst": "Nei"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Har barnet årlig inntekt over 111 477kr?",
+              "høyretekst": "Ja"
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Tor gfdg"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Fødselsdato",
+              "høyretekst": "09.08.2022"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Hvilken relasjon har du til barnet?",
+              "høyretekst": "FORELDER"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Mottar barnet barnepensjon?",
+              "høyretekst": "Nei"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Har barnet årlig inntekt over 111 477kr?",
+              "høyretekst": "Ja"
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Navn",
+              "høyretekst": "Geir kjgds"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Fødselsdato",
+              "høyretekst": "09.08.2022"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Hvilken relasjon har du til barnet?",
+              "høyretekst": "FOSTERFORELDER"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Mottar barnet barnepensjon?",
+              "høyretekst": "Ja"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Har barnet årlig inntekt over 111 477kr?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Student",
+      "underblokker": [
+        {
+          "type": "FELT",
+          "felt": "Er du student nå?",
+          "verdi": "Ja, men har avbrutt studiet helt på grunn av sykdom"
+        },
+        {
+          "type": "FELT",
+          "felt": "Har du planer om å komme tilbake til studiet?",
+          "verdi": "Nei"
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Andre ytelser",
+      "underblokker": [
+        {
+          "type": "FELT",
+          "felt": "Har du fått eller skal du få ekstra utbetalinger fra arbeidsgiver?",
+          "verdi": "Ja"
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Kryss av for utbetalinger du får, eller nylig har søkt om:",
+          "tabellrader": [
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Godtgjørelse eller lønn for verv",
+              "høyretekst": ""
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Økonomisk sosialhjelp",
+              "høyretekst": ""
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Omsorgsstønad (tidligere omsorgslønn)",
+              "høyretekst": ""
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Introduksjonssønad (introduksjonsprogrammet)",
+              "høyretekst": ""
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Kvalifiseringsstønad (kvalifiseringsprogrammet)",
+              "høyretekst": ""
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Ytelser fra utenlandske trygdemyndigheter",
+              "høyretekst": ""
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Avtalefestet pensjon (AFP)",
+              "høyretekst": "Utbetaler: sdfdsf"
+            },
+            {
+              "type": "TABELLRAD",
+              "venstretekst": "Lån, stipend eller sykestipend fra Lånekassen",
+              "høyretekst": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Tillegsopplysninger",
+      "underblokker": [
+        {
+          "type": "GRUPPE",
+          "overskrift": "Hvis du har flere opplysninger du mener er viktig for søknaden din, kan du skrive dem her (valgfritt)",
+          "tabellrader": [
+            {
+              "type": "FRITEKST",
+              "tekst": "tjthgjtjyjtyjghj gfh gfhhgf ghg fdgdfg gh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Vedlegg",
+      "underblokker": [
+        {
+          "type": "GRUPPE",
+          "overskrift": "Kopi av avtalen om omsorgsstønad fra kommunen din",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "meg.png",
+                "Skjermbilde.PNG"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Dokumentasjon av ytelser fra utenlandske trygdemyndigheter",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "Skjermbilde.PNG",
+                "meg.png"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Dokumentasjon av ekstra utbetalinger fra arbeidsgiver, for eksempel kopi av inngått sluttpakke, avtale om etterlønn eller andre goder. Både beløpet på utbetalingen og perioden den gjelder for bør være dokumentert",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "Skjermbilde.PNG",
+                "meg.png"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Fødselsattest eller adopsjonsbevis for: Tor gfdg",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "meg.png",
+                "Skjermbilde.PNG"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Bostedbevis for: Geir kjgds",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "Skjermbilde.PNG",
+                "meg.png"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Annet",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "meg.png",
+                "Skjermbilde.PNG"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEMA",
+      "overskrift": "Manglende vedlegg",
+      "underblokker": [
+        {
+          "type": "LISTE",
+          "tittel": "",
+          "punkter": [
+            "Bekreftelse fra studiested på hvilken dato studiet ble avbrutt fra."
+          ]
+        },
+        {
+          "type": "FRITEKST",
+          "tekst": "Du kan ettersende dette innen 14 dager per post eller digitalt. Du kan også levere dette på ditt lokale NAV kontor"
+        }
+      ]
+    }
+  ]
+}

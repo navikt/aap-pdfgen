@@ -1,0 +1,83 @@
+{{#eq type "TABELL"}}
+    {{#if this.overskrift}}
+        <div class="tabellcontainer avoid-page-break">
+            <p class="element-overskrift"> <!-- typo-etikett-liten -->
+                {{ this.overskrift }}
+            </p>
+    {{/if}}
+    {{#if this.undertekst}}
+            <p>{{ this.undertekst }}</p>
+    {{/if }}
+    {{#each tabellrader}}
+            <div class="gruppeelement">
+                <div class="leftCol">
+                    <p>{{ this.venstretekst }}</p>
+                </div>
+
+                <div class="rightCol">
+                    <p>{{ this.høyretekst }}</p>
+                </div>
+            </div>
+        {{#if this.underblokker}}
+            {{#each this.underblokker as |blokk index| ~}}
+                    <div class="gruppeelement">
+                        {{> aap-pdfgen/partials/blokkpartial blokk}}
+                    </div>
+            {{/each}}
+        {{/if}}
+    {{/each}}
+    </div>
+{{/eq}}
+{{#eq type "TABELLRAD"}}
+    <div class="blokk">
+        <div class="leftCol">
+            <p>{{ this.venstretekst }}</p>
+        </div>
+
+        <div class="rightCol">
+            <p>{{ this.høyretekst }}</p>
+        </div>
+    </div>
+{{/eq}}
+{{#eq type "LISTE"}}
+    <div class="felt">
+        <div class="venstre">
+            <p>{{ this.tittel }}</p>
+        </div>
+        <div class="venstre">
+            {{#each punkter}}
+                <div>
+                    <img class="vedleggikon" src="{{ image "vedlegg.png" }}"/>
+                    <p class="inline">{{ this }}</p>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+{{/eq}}
+{{#eq type "FELT"}}
+    <div class="felt avoid-page-break">
+        <p class="element-overskrift">{{ this.felt }}</p>
+        <p>{{ this.verdi }}</p>
+    </div>
+{{/eq}}
+{{#eq type "GRUPPELISTE"}}
+        <div class="gruppelistecontainer">
+            <p class="element-overskrift">{{ this.overskrift }}</p>
+            {{#each tabellrader as |blokk index| ~}}
+                {{> aap-pdfgen/partials/blokkpartial blokk}}
+            {{/each}}
+        </div>
+{{/eq}}
+{{#eq type "GRUPPE"}}
+    <div class="avoid-page-break gruppecontainer">
+        <p class="element-overskrift">{{ this.overskrift }}</p>
+        {{#each tabellrader as |blokk index| ~}}
+                {{> aap-pdfgen/partials/blokkpartial blokk}}
+        {{/each}}
+    </div>
+{{/eq}}
+{{#eq type "FRITEKST"}}
+    <div class="element">
+        <p>{{ this.tekst }}</p>
+    </div>
+{{/eq}}

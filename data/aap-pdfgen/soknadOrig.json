@@ -1,0 +1,167 @@
+{
+  "dokument" : "Søknad om engangsstønad",
+  "søker" : {
+    "id" : "010101010101",
+    "typeId" : null,
+    "navn" : "Mor Mellommor Morsen",
+    "type" : null,
+    "bosattLand" : null,
+    "nasjonalitet" : null
+  },
+  "mottattdato" : {
+    "beskrivelse" : "Sendt til NAV",
+    "datotid" : "08.03.2022 15:57"
+  },
+  "temaer" : [ {
+    "type" : "TEMA",
+    "overskrift" : "Startdato",
+    "underblokker" : [ {
+      "type": "GRUPPE",
+      "overskrift": "Ønsker å søke om startdato tilbake i tid",
+      "tabellrader": [{
+        "type" : "FRITEKST",
+        "tekst": " Vil gjerne søke tilbake i tid fordi jeg har vært syk og ikke har hatt mulighet til å søke før nå."
+      }]
+    },{
+      "type" : "FELT",
+      "felt" : "Vet du når du skal ta ut ferie?",
+      "verdi": "Ja jeg vet datoer"
+    },{
+      "type" : "FELT",
+      "felt" : "Ferieperiode",
+      "verdi": "Fra 2022-01-01 til 2022-05-01"
+    },{
+      "type" : "FELT",
+      "felt" : "Antall dager",
+      "verdi": "34"
+    }
+    ]
+  },
+    {
+      "type": "TEMA",
+      "overskrift": "Tilknytning til Norge",
+      "underblokker": [
+        {
+          "type": "FELT",
+          "felt": "Har du bodd sammenhengende i Norge de fem siste årene?",
+          "verdi": "Nei"
+        },
+        {
+          "type": "FELT",
+          "felt": "Har du jobbet sammenhengende i Norge de fem siste årene?",
+          "verdi": "Ja"
+        },
+        {
+          "type": "FELT",
+          "felt": "Har du i tillegg til jobb i Norge, også jobbet i et annet land de fem siste årene?",
+          "verdi": "Ja"
+        }
+      ]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Utenlandsopphold",
+      "underblokker" : [ {
+        "type" : "GRUPPE",
+        "overskrift" : "Østerrike",
+        "tabellrader" : [ {
+          "type" : "TABELLRAD",
+          "venstretekst" : "Periode",
+          "høyretekst" : "08.03.2021 – 07.09.2021"
+        },{
+          "type" : "TABELLRAD",
+          "venstretekst": "Arbeidet i perioden",
+          "høyretekst": "Nei"
+        },{
+          "type" : "TABELLRAD",
+          "venstretekst": "Personnummer/ID-nummer",
+          "høyretekst": "324235654"
+        } ]
+      },{
+        "type" : "GRUPPE",
+        "overskrift": "Finland",
+        "tabellrader" : [ {
+          "type" : "TABELLRAD",
+          "venstretekst" : "Periode",
+          "høyretekst" : "08.09.2021 – 08.03.2022"
+        } ]
+      }
+      ]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Yrkesskade",
+      "underblokker" : [ {
+        "type" : "FELT",
+        "felt" : "Har du en yrkessykdom eller yrkesskade som påvirker hvor mye du kan jobbe?",
+        "verdi" : "Ja"
+      }]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Andre ytelser",
+      "underblokker" : [ {
+        "type" : "FELT",
+        "felt" : "Har du en yrkessykdom eller yrkesskade som påvirker hvor mye du kan jobbe?",
+        "verdi" : "Ja"
+      }]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Barn",
+      "underblokker" : [ {
+        "type" : "FELT",
+        "felt" : "Har du en yrkessykdom eller yrkesskade som påvirker hvor mye du kan jobbe?",
+        "verdi" : "Ja"
+      }]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Tilleggsopplysninger",
+      "underblokker" : [ {
+        "type": "GRUPPE",
+        "overskrift": "Hvis du har flere opplysninger du mener er viktig for søknaden din, kan du skrive dem her (valgfritt)",
+        "tabellrader": [{
+          "type" : "FRITEKST",
+          "tekst": "sdgkjs sdgjksg sdgkjsl gslkjgs sdflkjsflkjwelg sdjksdf lsdf sfdkj sfk gewkjsdf jsdfljsg ksjfd klds sdfaj asdfk sdfk sdf kjsfd"
+        }]
+      }]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Barn",
+      "underblokker" : [ {
+        "type": "GRUPPE",
+        "tabellrader": [{
+          "type" : "TABELLRAD",
+          "venstretekst" : "Navn",
+          "høyretekst" : "Tor Idland"
+        },{
+          "type" : "TABELLRAD",
+          "venstretekst" : "Har barnet årlig inntekt over 111 477kr?",
+          "høyretekst" : "Ja"
+        },{
+          "type" : "TABELLRAD",
+          "venstretekst" : "Har barnet årlig inntekt over 111 477kr?",
+          "høyretekst" : "Ja"
+        }
+        ]
+      },{
+        "type": "GRUPPE",
+        "tabellrader": [{
+          "type" : "TABELLRAD",
+          "venstretekst" : "Navn",
+          "høyretekst" : "Tor Idland"
+        },{
+          "type" : "TABELLRAD",
+          "venstretekst" : "Har barnet årlig inntekt over 111 477kr?",
+          "høyretekst" : "Ja"
+        },{
+          "type" : "TABELLRAD",
+          "venstretekst" : "Har barnet årlig inntekt over 111 477kr?",
+          "høyretekst" : "Ja"
+        }
+        ]
+      }
+      ]
+    },{
+      "type" : "TEMA",
+      "overskrift": "Tilleggsopplysninger",
+      "underblokker" : [ ]
+    }
+  ]
+}

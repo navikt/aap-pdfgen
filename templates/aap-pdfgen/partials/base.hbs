@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{> doctitle}}</title>
+    {{#block 'aap-pdfgen/partials/style' }}
+    {{/block}}
+</head>
+<body>
+<div id="header">
+    <img class="navlogo" src="{{ image "Hvit-resized.png" }}" />
+    <h1 class="title">{{> title}}</h1>
+</div>
+<div class="container">
+    <div class="personinfo">
+        <div class="persontekst">
+            <div class="persontekst__sidetopp">
+                <img class="personikon" src="{{ image "Personikon.png" }}"/>
+                <div class="persontekst__personalia">
+                    <p class="navn">
+                        {{ søker.navn }}
+                    </p>
+                    <p class="id">
+                        {{ insert_at søker.id 6 }}
+                    </p>
+                </div>
+                <div class="sendt">
+                    {{# if mottattdato}}
+                        <p>
+                            {{mottattdato.beskrivelse}}<br/>{{ mottattdato.datotid }}
+                        </p>
+                    {{/if}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="temacontainer">
+        {{#each temaer as |tema|~}}
+            <div class="tema">
+                <h2 class="tema">{{ tema.overskrift }}</h2>
+                <p>{{tema.beskrivelse}}</p>
+                {{#each underblokker as |blokk|~}}
+                    <div class="blokk">
+                        {{> aap-pdfgen/partials/blokkpartial blokk}}
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+    </div>
+</div>
+<div id="footer">
+    <span class="soknadsid">{{ soknadsId }}</span>
+    <span class="sidetall">side <span id="pagenumber"></span> av <span id="pagecount"></span></span>
+</div>
+</body>
+</html>
