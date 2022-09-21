@@ -47,7 +47,7 @@
         <div class="venstre">
             {{#each punkter}}
                 <div>
-                    <img class="vedleggikon" src="{{ image "vedlegg.png" }}"/>
+                    <img class="vedleggikon" alt="vedlegg" src="{{ image "vedlegg.png" }}"/>
                     <p class="inline">{{ this }}</p>
                 </div>
             {{/each}}
@@ -60,13 +60,21 @@
         <p>{{ this.verdi }}</p>
     </div>
 {{/eq}}
-{{#eq type "GRUPPELISTE"}}
-        <div class="gruppelistecontainer">
-            <p class="element-overskrift">{{ this.overskrift }}</p>
-            {{#each tabellrader as |blokk index| ~}}
-                {{> aap-pdfgen/partials/blokkpartial blokk}}
+{{#eq type "FELTGRUPPE"}}
+    <div>
+        {{#if this.overskrift}}
+            <div>
+                <p class="element-overskrift">{{ this.overskrift }}</p>
+            </div>
+        {{/if}}
+        <div class="feltgruppecontainer avoid-page-break">
+            {{#each felter as |blokk index| ~}}
+                <div class="feltgruppeelement">
+                    {{> aap-pdfgen/partials/blokkpartial blokk}}
+                </div>
             {{/each}}
         </div>
+    </div>
 {{/eq}}
 {{#eq type "GRUPPE"}}
     <div class="avoid-page-break gruppecontainer">
@@ -77,7 +85,7 @@
     </div>
 {{/eq}}
 {{#eq type "FRITEKST"}}
-    <div class="element">
+    <div {{#if this.indent}} class="element indent" {{else}} class="element" {{/if}}>
         <p>{{ this.tekst }}</p>
     </div>
 {{/eq}}
