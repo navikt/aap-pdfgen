@@ -1,47 +1,8 @@
 {
-  "søker": {
-    "id": "1992-09-08",
-    "navn": "Fornavn Fra Oppslag"
-  },
-  "mottattdato": {
-    "beskrivelse": "Sendt til NAV",
-    "datotid": "08.09.2022 09:24"
-  },
   "temaer": [
     {
       "type": "TEMA",
-      "overskrift": "Startdato",
-      "underblokker": [
-        {
-          "type": "GRUPPE",
-          "overskrift": "Fritekst - Ønsker startdato tilbake i tid",
-          "tabellrader": [
-            {
-              "type": "FRITEKST",
-              "tekst": "sdfsdf"
-            }
-          ]
-        },
-        {
-          "type": "FELT",
-          "felt": "Planlegger du å ta ferie før startdato på AAP?",
-          "verdi": "Ja"
-        },
-        {
-          "type": "FELT",
-          "felt": "Vet du når du skal ta ut ferie?",
-          "verdi": "Nei, men jeg vet antall feriedager"
-        },
-        {
-          "type": "FELT",
-          "felt": "Antall dager",
-          "verdi": "43"
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Tilknytning til Norge",
+      "overskrift": "Bosted og jobb",
       "underblokker": [
         {
           "type": "FELT",
@@ -51,28 +12,7 @@
         {
           "type": "FELT",
           "felt": "Har du jobbet utenfor Norge de fem siste årene?",
-          "verdi": "Ja"
-        },
-        {
-          "type": "GRUPPE",
-          "overskrift": "Nå må du oppgi i hvilke perioder du har jobbet utenfor Norge de fem siste årene. Oppgi også hvilket land du var i.",
-          "tabellrader": [
-            {
-              "type": "FELTGRUPPE",
-              "felter": [
-                {
-                  "type": "FELT",
-                  "felt": "Land",
-                  "verdi": "AF:Afghanistan"
-                },
-                {
-                  "type": "FELT",
-                  "felt": "Periode",
-                  "verdi": "Fra 12.09.2022 til 30.09.2022"
-                }
-              ]
-            }
-          ]
+          "verdi": "Nei"
         }
       ]
     },
@@ -127,7 +67,7 @@
             {
               "type": "FELT",
               "felt": "Er informasjonen om fastlegen din riktig?",
-              "verdi": "Ja"
+              "verdi": "Nei"
             }
           ]
         }
@@ -136,33 +76,7 @@
     {
       "type": "TEMA",
       "overskrift": "Andre behandlere",
-      "underblokker": [
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FELT",
-              "felt": "Navn",
-              "verdi": "Tor Idland"
-            },
-            {
-              "type": "FELT",
-              "felt": "Kontor",
-              "verdi": "dsfdf"
-            },
-            {
-              "type": "FELT",
-              "felt": "Adresse",
-              "verdi": "Ivan undefined, 0123 oslo"
-            },
-            {
-              "type": "FELT",
-              "felt": "Telefon",
-              "verdi": "99999997"
-            }
-          ]
-        }
-      ]
+      "underblokker": []
     },
     {
       "type": "TEMA",
@@ -179,12 +93,12 @@
             {
               "type": "FELT",
               "felt": "Fødselsdato",
-              "verdi": "2021-09-08"
+              "verdi": "2021-09-23"
             },
             {
               "type": "FELT",
-              "felt": "Mottar barnet barnepensjon?",
-              "verdi": "Ja"
+              "felt": "Har barnet årlig inntekt over 111 477kr?",
+              "verdi": "Nei"
             }
           ]
         },
@@ -199,12 +113,12 @@
             {
               "type": "FELT",
               "felt": "Fødselsdato",
-              "verdi": "2020-09-08"
+              "verdi": "2020-09-23"
             },
             {
               "type": "FELT",
-              "felt": "Mottar barnet barnepensjon?",
-              "verdi": "Ja"
+              "felt": "Har barnet årlig inntekt over 111 477kr?",
+              "verdi": "Nei"
             }
           ]
         },
@@ -214,36 +128,21 @@
             {
               "type": "FELT",
               "felt": "Navn",
-              "verdi": "Barn Nummer Tre"
+              "verdi": "Tor gfdg"
             },
             {
               "type": "FELT",
               "felt": "Fødselsdato",
-              "verdi": "2019-09-08"
+              "verdi": "06.09.2022"
             },
             {
               "type": "FELT",
-              "felt": "Mottar barnet barnepensjon?",
-              "verdi": "Ja"
-            }
-          ]
-        },
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FELT",
-              "felt": "Navn",
-              "verdi": "Barn Nummer Fire"
+              "felt": "Hvilken relasjon har du til barnet?",
+              "verdi": "FORELDER"
             },
             {
               "type": "FELT",
-              "felt": "Fødselsdato",
-              "verdi": "2018-09-08"
-            },
-            {
-              "type": "FELT",
-              "felt": "Mottar barnet barnepensjon?",
+              "felt": "Har barnet årlig inntekt over 111 477kr?",
               "verdi": "Ja"
             }
           ]
@@ -272,11 +171,44 @@
         {
           "type": "FELT",
           "felt": "Har du fått eller skal du få ekstra utbetalinger fra arbeidsgiver?",
-          "verdi": "Nei"
+          "verdi": "Ja"
         },
         {
           "type": "FELTGRUPPE",
           "felter": [
+            {
+              "type": "FRITEKST",
+              "tekst": "Godtgjørelse eller lønn for verv"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Økonomisk sosialhjelp"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Omsorgsstønad (tidligere omsorgslønn)"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Introduksjonssønad (introduksjonsprogrammet)"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Kvalifiseringsstønad (kvalifiseringsprogrammet)"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Ytelser fra utenlandske trygdemyndigheter"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Avtalefestet pensjon (AFP)"
+            },
+            {
+              "type": "FRITEKST",
+              "tekst": "Utbetaler: fdsfds",
+              "indent": true
+            },
             {
               "type": "FRITEKST",
               "tekst": "Lån, stipend eller sykestipend fra Lånekassen"
@@ -288,24 +220,34 @@
     },
     {
       "type": "TEMA",
-      "overskrift": "Tillegsopplysninger",
+      "overskrift": "Vedlegg",
       "underblokker": [
         {
           "type": "GRUPPE",
-          "overskrift": "Hvis du har flere opplysninger du mener er viktig for søknaden din, kan du skrive dem her (valgfritt)",
+          "overskrift": "Kopi av avtalen om omsorgsstønad fra kommunen din",
           "tabellrader": [
             {
-              "type": "FRITEKST",
-              "tekst": "sdfsdf"
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "meg.png"
+              ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Vedlegg",
-      "underblokker": [
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Dokumentasjon av ytelser fra utenlandske trygdemyndigheter",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "meg.png"
+              ]
+            }
+          ]
+        },
         {
           "type": "GRUPPE",
           "overskrift": "Hvis du har søkt eller mottar sykestipend, trenger vi kopi av vedtaket eller søknaden.",
@@ -314,9 +256,32 @@
               "type": "LISTE",
               "tittel": "",
               "punkter": [
-                "meg.png",
-                "Skjermbilde.PNG"
+                "meg.png"
               ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "Dokumentasjon av ekstra utbetalinger fra arbeidsgiver, for eksempel kopi av inngått sluttpakke, avtale om etterlønn eller andre goder. Både beløpet på utbetalingen og perioden den gjelder for bør være dokumentert",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": [
+                "meg.png"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GRUPPE",
+          "overskrift": "",
+          "tabellrader": [
+            {
+              "type": "LISTE",
+              "tittel": "",
+              "punkter": []
             }
           ]
         }
@@ -329,7 +294,9 @@
         {
           "type": "LISTE",
           "tittel": "",
-          "punkter": []
+          "punkter": [
+            "Fødselsattest eller adopsjonsbevis for: Tor gfdg"
+          ]
         }
       ]
     },

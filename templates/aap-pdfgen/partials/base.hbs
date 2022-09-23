@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="nb-NO">
 <head>
     <meta charset="UTF-8"/>
     <title>{{> doctitle}}</title>
+    <meta name="description" content="{{> docdescription}}"/>
+    <meta name="subject" content="{{> docsubject}}"/>
+    <meta name="author" content="NAV IT"/>
     {{#block 'aap-pdfgen/partials/style' }}
     {{/block}}
 </head>
 <body>
 <div id="header">
-    <img class="navlogo" src="{{ image "Hvit-resized.png" }}" />
+    <img class="navlogo" alt="nav logo" src="{{ image "Hvit-resized.png" }}" />
     <h1 class="title">{{> title}}</h1>
 </div>
 <div class="container">
     <div class="personinfo">
         <div class="persontekst">
             <div class="persontekst__sidetopp">
-                <img class="personikon" src="{{ image "Personikon.png" }}"/>
+                <img class="personikon" alt="person ikon" src="{{ image "Personikon.png" }}"/>
                 <div class="persontekst__personalia">
                     <p class="navn">
-                        {{ søker.navn }}
+                        {{ søker.navn.fornavn }}{{ søker.navn.mellomnavn}}{{ søker.navn.etternavn }}
                     </p>
                     <p class="id">
                         {{ insert_at søker.id 6 }}
