@@ -47,6 +47,20 @@
         font-family: "Source Sans Pro";
     }
 
+    .navlogo-wrapper {
+        position: absolute;
+        top: 8mm;
+        left: 10mm;
+    }
+    .navlogo {
+        width: 48px;
+    }
+    .title-wrapper {
+        position: absolute;
+        top: 5mm;
+        left: 30mm;
+    }
+
     p.inline {
         display: inline-block;
     }
@@ -81,8 +95,19 @@
     }
 
     #header {
-        background: rgb(193, 181, 208);
-        padding: 0cm 0.7cm;
+        background: rgb(204,241,214);
+        /*padding: 0cm 0.7cm;*/
+        padding: 0.5cm;
+        position: absolute;
+        top: 12px;
+        width: 100%;
+        z-index: -1000;
+    }
+
+    .title {
+        border: 2px solid black;
+        display: inline-block;
+        padding-left: 0.5cm;
     }
 
     h3 {
@@ -94,20 +119,6 @@
         margin-bottom: 5px;
     }
 
-    .title {
-        display: inline-block;
-        position: absolute;
-        top: 12px;
-        left: 100px;
-    }
-
-    .navlogo {
-        display: inline-block;
-        padding-top: 15px;
-        padding-bottom: 12px;
-        margin-left: 3px;
-        width: 48px;
-    }
 
     .container {
         margin: 0cm 0.7cm;
@@ -116,7 +127,7 @@
 
     .personinfo {
         position: relative;
-        top: 25px;
+        top: 110px;
     }
 
     .navn {
@@ -354,10 +365,6 @@
         page-break-inside: avoid !important;
     }
 
-    #temacontainer {
-        position: relative;
-        top: 60px;
-    }
 
     .tema {
         margin-top: 30px;
@@ -396,6 +403,7 @@
 
     .temacontainer {
         width: 100%;
+        margin-top: 100px;
     }
 
     .feltgruppecontainer {

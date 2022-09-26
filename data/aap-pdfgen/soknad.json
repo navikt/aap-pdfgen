@@ -1,314 +1,323 @@
 {
-  "temaer": [
-    {
-      "type": "TEMA",
-      "overskrift": "Bosted og jobb",
-      "underblokker": [
-        {
-          "type": "FELT",
-          "felt": "Har du bodd sammenhengende i Norge de fem siste årene?",
-          "verdi": "Ja"
-        },
-        {
-          "type": "FELT",
-          "felt": "Har du jobbet utenfor Norge de fem siste årene?",
-          "verdi": "Nei"
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Yrkesskade",
-      "underblokker": [
-        {
-          "type": "FELT",
-          "felt": "Har du en yrkessykdom eller yrkesskade som påvirker hvor mye du kan jobbe?",
-          "verdi": "Nei"
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Registrerte behandlere",
-      "underblokker": [
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FELT",
-              "felt": "Type",
-              "verdi": "FASTLEGE"
-            },
-            {
-              "type": "FELT",
-              "felt": "Kategori",
-              "verdi": "LEGE"
-            },
-            {
-              "type": "FELT",
-              "felt": "Navn",
-              "verdi": "Nina Unni Borge"
-            },
-            {
-              "type": "FELT",
-              "felt": "Kontor",
-              "verdi": "ASKØY KOMMUNE SAMFUNNSMEDISINSK AVD ALMENNLEGETJENESTEN"
-            },
-            {
-              "type": "FELT",
-              "felt": "Adresse",
-              "verdi": "Kleppeveien 17, 5300 KLEPPESTØ"
-            },
-            {
-              "type": "FELT",
-              "felt": "Telefon",
-              "verdi": "56 15 83 10"
-            },
-            {
-              "type": "FELT",
-              "felt": "Er informasjonen om fastlegen din riktig?",
-              "verdi": "Nei"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Andre behandlere",
-      "underblokker": []
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Barn",
-      "underblokker": [
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FELT",
-              "felt": "Navn",
-              "verdi": "Barn Nummer En"
-            },
-            {
-              "type": "FELT",
-              "felt": "Fødselsdato",
-              "verdi": "2021-09-23"
-            },
-            {
-              "type": "FELT",
-              "felt": "Har barnet årlig inntekt over 111 477kr?",
-              "verdi": "Nei"
-            }
-          ]
-        },
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FELT",
-              "felt": "Navn",
-              "verdi": "Barn Nummer To"
-            },
-            {
-              "type": "FELT",
-              "felt": "Fødselsdato",
-              "verdi": "2020-09-23"
-            },
-            {
-              "type": "FELT",
-              "felt": "Har barnet årlig inntekt over 111 477kr?",
-              "verdi": "Nei"
-            }
-          ]
-        },
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FELT",
-              "felt": "Navn",
-              "verdi": "Tor gfdg"
-            },
-            {
-              "type": "FELT",
-              "felt": "Fødselsdato",
-              "verdi": "06.09.2022"
-            },
-            {
-              "type": "FELT",
-              "felt": "Hvilken relasjon har du til barnet?",
-              "verdi": "FORELDER"
-            },
-            {
-              "type": "FELT",
-              "felt": "Har barnet årlig inntekt over 111 477kr?",
-              "verdi": "Ja"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Student",
-      "underblokker": [
-        {
-          "type": "FELT",
-          "felt": "Er du student nå?",
-          "verdi": "Nei"
-        },
-        {
-          "type": "FELT",
-          "felt": "Har du planer om å komme tilbake til studiet?"
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Andre ytelser",
-      "underblokker": [
-        {
-          "type": "FELT",
-          "felt": "Har du fått eller skal du få ekstra utbetalinger fra arbeidsgiver?",
-          "verdi": "Ja"
-        },
-        {
-          "type": "FELTGRUPPE",
-          "felter": [
-            {
-              "type": "FRITEKST",
-              "tekst": "Godtgjørelse eller lønn for verv"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Økonomisk sosialhjelp"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Omsorgsstønad (tidligere omsorgslønn)"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Introduksjonssønad (introduksjonsprogrammet)"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Kvalifiseringsstønad (kvalifiseringsprogrammet)"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Ytelser fra utenlandske trygdemyndigheter"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Avtalefestet pensjon (AFP)"
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Utbetaler: fdsfds",
-              "indent": true
-            },
-            {
-              "type": "FRITEKST",
-              "tekst": "Lån, stipend eller sykestipend fra Lånekassen"
-            }
-          ],
-          "overskrift": "Kryss av for utbetalinger du får, eller nylig har søkt om:"
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Vedlegg",
-      "underblokker": [
-        {
-          "type": "GRUPPE",
-          "overskrift": "Kopi av avtalen om omsorgsstønad fra kommunen din",
-          "tabellrader": [
-            {
-              "type": "LISTE",
-              "tittel": "",
-              "punkter": [
-                "meg.png"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "GRUPPE",
-          "overskrift": "Dokumentasjon av ytelser fra utenlandske trygdemyndigheter",
-          "tabellrader": [
-            {
-              "type": "LISTE",
-              "tittel": "",
-              "punkter": [
-                "meg.png"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "GRUPPE",
-          "overskrift": "Hvis du har søkt eller mottar sykestipend, trenger vi kopi av vedtaket eller søknaden.",
-          "tabellrader": [
-            {
-              "type": "LISTE",
-              "tittel": "",
-              "punkter": [
-                "meg.png"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "GRUPPE",
-          "overskrift": "Dokumentasjon av ekstra utbetalinger fra arbeidsgiver, for eksempel kopi av inngått sluttpakke, avtale om etterlønn eller andre goder. Både beløpet på utbetalingen og perioden den gjelder for bør være dokumentert",
-          "tabellrader": [
-            {
-              "type": "LISTE",
-              "tittel": "",
-              "punkter": [
-                "meg.png"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "GRUPPE",
-          "overskrift": "",
-          "tabellrader": [
-            {
-              "type": "LISTE",
-              "tittel": "",
-              "punkter": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Manglende vedlegg",
-      "underblokker": [
-        {
-          "type": "LISTE",
-          "tittel": "",
-          "punkter": [
-            "Fødselsattest eller adopsjonsbevis for: Tor gfdg"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "TEMA",
-      "overskrift": "Bekreftelse",
-      "underblokker": [
-        {
-          "type": "FRITEKST",
-          "tekst": "Jeg har lest all informasjonen jeg har fått i søknaden og bekrefter at opplysningene jeg har gitt er korrekte."
-        }
-      ]
+  "søker": {
+    "navn": {
+      "fornavn": "Tor",
+      "etternavn": "Idland"
     }
-  ]
+  },
+  "kvittering": {
+    "mottattdato": "12.12.2022",
+    "temaer": [
+      {
+        "type": "TEMA",
+        "overskrift": "Bosted og jobb",
+        "underblokker": [
+          {
+            "type": "FELT",
+            "felt": "Har du bodd sammenhengende i Norge de fem siste årene?",
+            "verdi": "Ja"
+          },
+          {
+            "type": "FELT",
+            "felt": "Har du jobbet utenfor Norge de fem siste årene?",
+            "verdi": "Nei"
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Yrkesskade",
+        "underblokker": [
+          {
+            "type": "FELT",
+            "felt": "Har du en yrkessykdom eller yrkesskade som påvirker hvor mye du kan jobbe?",
+            "verdi": "Nei"
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Registrerte behandlere",
+        "underblokker": [
+          {
+            "type": "FELTGRUPPE",
+            "felter": [
+              {
+                "type": "FELT",
+                "felt": "Type",
+                "verdi": "FASTLEGE"
+              },
+              {
+                "type": "FELT",
+                "felt": "Kategori",
+                "verdi": "LEGE"
+              },
+              {
+                "type": "FELT",
+                "felt": "Navn",
+                "verdi": "Nina Unni Borge"
+              },
+              {
+                "type": "FELT",
+                "felt": "Kontor",
+                "verdi": "ASKØY KOMMUNE SAMFUNNSMEDISINSK AVD ALMENNLEGETJENESTEN"
+              },
+              {
+                "type": "FELT",
+                "felt": "Adresse",
+                "verdi": "Kleppeveien 17, 5300 KLEPPESTØ"
+              },
+              {
+                "type": "FELT",
+                "felt": "Telefon",
+                "verdi": "56 15 83 10"
+              },
+              {
+                "type": "FELT",
+                "felt": "Er informasjonen om fastlegen din riktig?",
+                "verdi": "Nei"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Andre behandlere",
+        "underblokker": []
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Barn",
+        "underblokker": [
+          {
+            "type": "FELTGRUPPE",
+            "felter": [
+              {
+                "type": "FELT",
+                "felt": "Navn",
+                "verdi": "Barn Nummer En"
+              },
+              {
+                "type": "FELT",
+                "felt": "Fødselsdato",
+                "verdi": "2021-09-23"
+              },
+              {
+                "type": "FELT",
+                "felt": "Har barnet årlig inntekt over 111 477kr?",
+                "verdi": "Nei"
+              }
+            ]
+          },
+          {
+            "type": "FELTGRUPPE",
+            "felter": [
+              {
+                "type": "FELT",
+                "felt": "Navn",
+                "verdi": "Barn Nummer To"
+              },
+              {
+                "type": "FELT",
+                "felt": "Fødselsdato",
+                "verdi": "2020-09-23"
+              },
+              {
+                "type": "FELT",
+                "felt": "Har barnet årlig inntekt over 111 477kr?",
+                "verdi": "Nei"
+              }
+            ]
+          },
+          {
+            "type": "FELTGRUPPE",
+            "felter": [
+              {
+                "type": "FELT",
+                "felt": "Navn",
+                "verdi": "Tor gfdg"
+              },
+              {
+                "type": "FELT",
+                "felt": "Fødselsdato",
+                "verdi": "06.09.2022"
+              },
+              {
+                "type": "FELT",
+                "felt": "Hvilken relasjon har du til barnet?",
+                "verdi": "FORELDER"
+              },
+              {
+                "type": "FELT",
+                "felt": "Har barnet årlig inntekt over 111 477kr?",
+                "verdi": "Ja"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Student",
+        "underblokker": [
+          {
+            "type": "FELT",
+            "felt": "Er du student nå?",
+            "verdi": "Nei"
+          },
+          {
+            "type": "FELT",
+            "felt": "Har du planer om å komme tilbake til studiet?"
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Andre ytelser",
+        "underblokker": [
+          {
+            "type": "FELT",
+            "felt": "Har du fått eller skal du få ekstra utbetalinger fra arbeidsgiver?",
+            "verdi": "Ja"
+          },
+          {
+            "type": "FELTGRUPPE",
+            "felter": [
+              {
+                "type": "FRITEKST",
+                "tekst": "Godtgjørelse eller lønn for verv"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Økonomisk sosialhjelp"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Omsorgsstønad (tidligere omsorgslønn)"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Introduksjonssønad (introduksjonsprogrammet)"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Kvalifiseringsstønad (kvalifiseringsprogrammet)"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Ytelser fra utenlandske trygdemyndigheter"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Avtalefestet pensjon (AFP)"
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Utbetaler: fdsfds",
+                "indent": true
+              },
+              {
+                "type": "FRITEKST",
+                "tekst": "Lån, stipend eller sykestipend fra Lånekassen"
+              }
+            ],
+            "overskrift": "Kryss av for utbetalinger du får, eller nylig har søkt om:"
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Vedlegg",
+        "underblokker": [
+          {
+            "type": "GRUPPE",
+            "overskrift": "Kopi av avtalen om omsorgsstønad fra kommunen din",
+            "tabellrader": [
+              {
+                "type": "LISTE",
+                "tittel": "",
+                "punkter": [
+                  "meg.png"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GRUPPE",
+            "overskrift": "Dokumentasjon av ytelser fra utenlandske trygdemyndigheter",
+            "tabellrader": [
+              {
+                "type": "LISTE",
+                "tittel": "",
+                "punkter": [
+                  "meg.png"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GRUPPE",
+            "overskrift": "Hvis du har søkt eller mottar sykestipend, trenger vi kopi av vedtaket eller søknaden.",
+            "tabellrader": [
+              {
+                "type": "LISTE",
+                "tittel": "",
+                "punkter": [
+                  "meg.png"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GRUPPE",
+            "overskrift": "Dokumentasjon av ekstra utbetalinger fra arbeidsgiver, for eksempel kopi av inngått sluttpakke, avtale om etterlønn eller andre goder. Både beløpet på utbetalingen og perioden den gjelder for bør være dokumentert",
+            "tabellrader": [
+              {
+                "type": "LISTE",
+                "tittel": "",
+                "punkter": [
+                  "meg.png"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GRUPPE",
+            "overskrift": "",
+            "tabellrader": [
+              {
+                "type": "LISTE",
+                "tittel": "",
+                "punkter": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Manglende vedlegg",
+        "underblokker": [
+          {
+            "type": "LISTE",
+            "tittel": "",
+            "punkter": [
+              "Fødselsattest eller adopsjonsbevis for: Tor gfdg"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TEMA",
+        "overskrift": "Bekreftelse",
+        "underblokker": [
+          {
+            "type": "FRITEKST",
+            "tekst": "Jeg har lest all informasjonen jeg har fått i søknaden og bekrefter at opplysningene jeg har gitt er korrekte."
+          }
+        ]
+      }
+    ]
+  }
 }

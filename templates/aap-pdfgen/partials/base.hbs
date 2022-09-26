@@ -10,9 +10,11 @@
     {{/block}}
 </head>
 <body>
-<div id="header">
+<div class="navlogo-wrapper">
     <img class="navlogo" alt="nav logo" src="{{ image "Hvit-resized.png" }}" />
-    <h1 class="title">{{> title}}</h1>
+</div>
+<div class="title-wrapper">
+    <h1>{{> title}}</h1>
 </div>
 <div class="container">
     <div class="personinfo">
@@ -21,25 +23,24 @@
                 <img class="personikon" alt="person ikon" src="{{ image "Personikon.png" }}"/>
                 <div class="persontekst__personalia">
                     <p class="navn">
-                        {{ søker.navn.fornavn }}{{ søker.navn.mellomnavn}}{{ søker.navn.etternavn }}
+                        {{ søker.navn.fornavn }} {{ søker.navn.mellomnavn}} {{ søker.navn.etternavn }}
                     </p>
                     <p class="id">
                         {{ insert_at søker.id 6 }}
                     </p>
                 </div>
                 <div class="sendt">
-                    {{# if mottattdato}}
+                    {{# if kvittering.mottattdato}}
                         <p>
-                            {{mottattdato.beskrivelse}}<br/>{{ mottattdato.datotid }}
+                            Søknad mottatt<br/>{{ kvittering.mottattdato }}
                         </p>
                     {{/if}}
                 </div>
             </div>
-
         </div>
     </div>
     <div class="temacontainer">
-        {{#each temaer as |tema|~}}
+        {{#each kvittering.temaer as |tema|~}}
             <div class="tema">
                 <h2 class="tema">{{ tema.overskrift }}</h2>
                 <p>{{tema.beskrivelse}}</p>
