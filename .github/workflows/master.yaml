@@ -9,6 +9,9 @@ env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     IMAGE_BASE: ghcr.io/${{ github.repository }}
     APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+    RESOURCE: nais.yaml
+    PRINT_PAYLOAD: true
+
 jobs:
    bygg:
       runs-on: ubuntu-latest
@@ -35,9 +38,7 @@ jobs:
       needs: bygg
       runs-on: ubuntu-latest
       env:
-          PRINT_PAYLOAD: true
           CLUSTER: dev-gcp
-          RESOURCE: nais.yaml
           IMAGE: ${{needs.bygg.outputs.image}}
       steps:
         -   uses: actions/checkout@v3
