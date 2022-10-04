@@ -25,7 +25,7 @@ jobs:
         - name: Setter image-navn
           run: echo "IMAGE=$(echo $IMAGE_BASE):$(echo $TAG)" >> $GITHUB_ENV
 
-        - name: Bygg and push Docker image
+        - name: Bygg og push Docker image
           id: build
           run: |
             echo "::set-output name=image::${{ env.IMAGE }}"                     
@@ -35,7 +35,7 @@ jobs:
 
    deploy_to_dev:
       environment: dev-gcp:aap
-      name: Deploy to dev
+      name: Deploy til dev
       needs: bygg
       runs-on: ubuntu-latest
       env:
@@ -47,7 +47,7 @@ jobs:
 
    deploy_to_prod:
       environment: prod-gcp:aap
-      name: Deploy to prod
+      name: Deploy til prod
       needs: bygg
       runs-on: ubuntu-latest
       env:
