@@ -35,6 +35,7 @@ jobs:
       needs: bygg
       runs-on: ubuntu-latest
       env:
+          PRINT_PAYLOAD: true
           CLUSTER: dev-gcp
           RESOURCE: nais.yaml
           IMAGE: ${{needs.bygg.outputs.image}}
