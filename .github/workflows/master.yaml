@@ -20,7 +20,7 @@ jobs:
       steps:
         - uses: actions/checkout@v3
         - name: Setter tag-navn
-          run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+          run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-${{ env.GITHUB_SHA }} | cut -c1-7)" >> $GITHUB_ENV
 
         - name: Setter image-navn
           run: echo "IMAGE=$(echo $IMAGE_BASE):$(echo $TAG)" >> $GITHUB_ENV
