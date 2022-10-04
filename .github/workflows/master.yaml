@@ -20,7 +20,7 @@ jobs:
       steps:
         - uses: actions/checkout@v3
         - name: Setter tag-navn
-          run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-${{ env.GITHUB_SHA }} | cut -c1-7)" >> $GITHUB_ENV
+          run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
 
         - name: Setter image-navn
           run: echo "IMAGE=$(echo $IMAGE_BASE):$(echo $TAG)" >> $GITHUB_ENV
@@ -38,8 +38,19 @@ jobs:
       needs: bygg
       runs-on: ubuntu-latest
       env:
-          CLUSTER: dev-gcp
-          IMAGE: ${{needs.bygg.outputs.image}}
+        CLUSTER: dev-gcp
+        IMAGE: ${{needs.bygg.outputs.image}}
       steps:
-        -   uses: actions/checkout@v3
-        -   uses: nais/deploy/actions/deploy@master
+        - uses: actions/checkout@v3
+        - uses: nais/deploy/actions/deploy@master
+
+   deploy_to_prod:
+      name: Deploy to prod
+      needs: bygg
+      runs-on: ubuntu-latest
+      env:
+        CLUSTER: prod-gcp
+        IMAGE: ${{needs.bygg.outputs.image}}
+      steps:
+        - uses: actions/checkout@v3
+        - uses: nais/deploy/actions/deploy@master
