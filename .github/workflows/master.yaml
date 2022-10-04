@@ -33,26 +33,17 @@ jobs:
             echo ${GITHUB_TOKEN} | docker login ghcr.io --username ${GITHUB_REPOSITORY} --password-stdin
             docker push ${IMAGE}
 
-   deploy_to_dev:
-      environment: dev-gcp:aap
-      name: Deploy til dev
-      needs: bygg
-      runs-on: ubuntu-latest
-      env:
-        CLUSTER: dev-gcp
-        IMAGE: ${{needs.bygg.outputs.image}}
-      steps:
-        - uses: actions/checkout@v3
-        - uses: nais/deploy/actions/deploy@master
-
-   deploy_to_prod:
-      environment: prod-gcp:aap
-      name: Deploy til prod
-      needs: bygg
-      runs-on: ubuntu-latest
-      env:
-        CLUSTER: prod-gcp
-        IMAGE: ${{needs.bygg.outputs.image}}
-      steps:
-        - uses: actions/checkout@v3
-        - uses: nais/deploy/actions/deploy@master
+   deploy:
+       strategy:
+           matrix:
+               cluster: [ dev-gcp,prod-gcp ]
+       environment: ${{ matrix.cluster }}:aap
+       name: Deploy til ${{ matrix.cluster }}
+       needs: bygg
+       runs-on: ubuntu-latest
+       env:
+           CLUSTER: ${{ matrix.cluster }}
+           IMAGE: ${{needs.bygg.outputs.image}}
+       steps:
+           - uses: actions/checkout@v3
+           - uses: nais/deploy/actions/deploy@master
