@@ -8,6 +8,7 @@ on:
 env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     IMAGE_BASE: ghcr.io/${{ github.repository }}
+    APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
     RESOURCE: nais.yaml
     PRINT_PAYLOAD: true
 
