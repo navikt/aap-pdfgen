@@ -1,0 +1,43 @@
+name: Build and deploy to dev
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    IMAGE_BASE: ghcr.io/${{ github.repository }}
+    APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+jobs:
+   bygg:
+      runs-on: ubuntu-latest
+      outputs:
+          image: ${{ steps.build.outputs.image }}
+      steps:
+        - uses: actions/checkout@v3
+        - name: Setter tag-navn
+          run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+
+        - name: Setter image-navn
+          run: echo "IMAGE=$(echo $IMAGE_BASE):$(echo $TAG)" >> $GITHUB_ENV
+
+        - name: Bygg and push Docker image
+          id: build
+          run: |
+            echo "::set-output name=image::${{ env.IMAGE }}"                     
+            docker build --pull --tag ${IMAGE} .
+            docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} -p ${GITHUB_TOKEN}
+            docker push ${IMAGE}
+
+   deploy_to_dev:
+      name: Deploy to dev
+      needs: bygg
+      runs-on: ubuntu-latest
+      env:
+          CLUSTER: dev-gcp
+          RESOURCE: nais.yaml
+          IMAGE: ${{needs.bygg.outputs.image}}
+      steps:
+        -   uses: actions/checkout@v3
+        -   uses: nais/deploy/actions/deploy@master
