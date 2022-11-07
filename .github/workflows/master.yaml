@@ -44,6 +44,7 @@ jobs:
        env:
            CLUSTER: ${{ matrix.cluster }}
            IMAGE: ${{needs.bygg.outputs.image}}
+           RESOURCE: ./${{matrix.cluster}}-alerts.yaml
        steps:
            - uses: actions/checkout@v3
            - uses: nais/deploy/actions/deploy@master
