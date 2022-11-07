@@ -28,7 +28,7 @@ jobs:
         - name: Bygg og push Docker image
           id: build
           run: |
-            echo "::set-output name=image::${{ env.IMAGE }}"                     
+            echo "::set-output name=image::${{ env.IMAGE }}"
             docker build --pull --tag ${IMAGE} .
             echo ${GITHUB_TOKEN} | docker login ghcr.io --username ${GITHUB_REPOSITORY} --password-stdin
             docker push ${IMAGE}
