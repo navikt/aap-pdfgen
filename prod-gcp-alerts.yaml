@@ -13,7 +13,7 @@ spec:
   alerts:
     - alert: pdfgen-nede
       expr: kube_deployment_status_replicas_unavailable{deployment="soknad-api",job="kubernetes-service-endpoints"} > 0
-      for: 5m
+      for: 10m
       description: "pdfgen har utilgjengelige podder i aap"
       action: "kubectl describe pod -l app=pdfgen -n aap` for events og `kubectl get pods -l app=pdfgen -n aap` for å se feilende podder"
       sla: respond within 1h, during office hours
