@@ -18,7 +18,7 @@ jobs:
       outputs:
           image: ${{ steps.build.outputs.image }}
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: Setter tag-navn
           run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
 
@@ -46,5 +46,5 @@ jobs:
            IMAGE: ${{needs.bygg.outputs.image}}
            RESOURCE: ./${{matrix.cluster}}-alerts.yaml
        steps:
-           - uses: actions/checkout@v3
+           - uses: actions/checkout@v4
            - uses: nais/deploy/actions/deploy@master
