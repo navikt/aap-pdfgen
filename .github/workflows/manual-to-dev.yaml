@@ -7,6 +7,12 @@ env:
 
 jobs:
   build:
+    permissions:
+      contents: read
+      actions: read
+      checks: write
+      id-token: write
+      packages: write
     name: Build and push Docker container
     runs-on: ubuntu-latest
     steps:
