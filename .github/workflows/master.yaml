@@ -19,6 +19,7 @@ jobs:
         actions: read
         checks: write
         id-token: write
+        packages: write
       runs-on: ubuntu-latest
       outputs:
           image: ${{ steps.build.outputs.image }}
