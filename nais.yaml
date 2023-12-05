@@ -11,6 +11,7 @@ spec:
       rules:
         - application: soknad-api
         - application: soknad-konsument
+        - application: innsending
 
   image: {{ image }}
   replicas:
