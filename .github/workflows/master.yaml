@@ -42,7 +42,10 @@ jobs:
    deploy:
        permissions:
          contents: read
+         actions: read
+         checks: write
          id-token: write
+         packages: write
        strategy:
            matrix:
                cluster: [ dev-gcp,prod-gcp ]
