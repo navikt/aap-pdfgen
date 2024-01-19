@@ -6,15 +6,27 @@ env:
   IMAGE: docker.pkg.github.com/${{ github.repository }}/aap-pdfgen:${{ github.sha }}
 
 jobs:
-  deploy_to_prod:
+  build:
     permissions:
       contents: read
       actions: read
       checks: write
       id-token: write
       packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and publish Docker image
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker build --pull --tag ${IMAGE} .
+          docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} -p ${GITHUB_TOKEN}
+          docker push ${IMAGE}
+  deploy_to_prod:
     name: Deploy to prod
     if: github.ref == 'refs/heads/master'
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,15 +35,3 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
           RESOURCE: nais.yaml
-      - name: Generate release version
-        run: |
-          TIME=$(TZ="Europe/Oslo" date +%Y.%m.%d-%H.%M)
-          COMMIT=$(git rev-parse --short=7 HEAD)
-          VERSION=$TIME-$COMMIT
-          echo "VERSION=${VERSION}" >> $GITHUB_ENV
-      - uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ env.VERSION }}
-          release_name: ${{ env.VERSION }}
