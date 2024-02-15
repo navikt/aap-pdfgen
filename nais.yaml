@@ -12,7 +12,11 @@ spec:
         - application: soknad-api
         - application: soknad-konsument
         - application: innsending
-
+  resources:
+    limits:
+      memory: 1024Mi
+    requests:
+      memory: 1024Mi
   image: {{ image }}
   replicas:
     min: 2
