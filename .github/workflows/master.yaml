@@ -1,61 +1,65 @@
-name: Build and deploy to dev
-
+name: Deploy to Dev And Prod
 on:
+  workflow_dispatch:
+    inputs:
+      cluster:
+        description: Cluster
+        required: true
+        default: dev-gcp
+        type: choice
+        options:
+          - dev-gcp
+          - prod-gcp
   push:
-    branches:
-      - master
+    branches: [ master ]
+    paths-ignore:
+      - '.github/**'
 
 env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    IMAGE_BASE: ghcr.io/${{ github.repository }}
-    APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-    RESOURCE: nais.yaml
-    PRINT_PAYLOAD: true
+  IMAGE: docker.pkg.github.com/${{ github.repository }}/aap-pdfgen:${{ github.sha }}
 
 jobs:
-   bygg:
-      permissions:
-        contents: read
-        actions: read
-        checks: write
-        id-token: write
-        packages: write
-      runs-on: ubuntu-latest
-      outputs:
-          image: ${{ steps.build.outputs.image }}
-      steps:
-        - uses: actions/checkout@v3
-        - name: Setter tag-navn
-          run: echo "TAG=$(date +%Y.%m.%d.%H%M%S)-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+  build:
+    if: github.event.pull_request.merged || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      actions: read
+      checks: write
+      id-token: write
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and publish Docker image
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker build --pull --tag ${IMAGE} .
+          docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} -p ${GITHUB_TOKEN}
+          docker push ${IMAGE}
 
-        - name: Setter image-navn
-          run: echo "IMAGE=$(echo $IMAGE_BASE):$(echo $TAG)" >> $GITHUB_ENV
+  deploy_to_dev:
+    name: Deploy to dev
+    if: github.event.pull_request.merged || github.event_name == 'push' || github.event.inputs.cluster == 'dev-gcp'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: nais.yaml
 
-        - name: Bygg og push Docker image
-          id: build
-          run: |
-            echo "::set-output name=image::${{ env.IMAGE }}"
-            docker build --pull --tag ${IMAGE} .
-            echo ${GITHUB_TOKEN} | docker login ghcr.io --username ${GITHUB_REPOSITORY} --password-stdin
-            docker push ${IMAGE}
-
-   deploy:
-       permissions:
-         contents: read
-         actions: read
-         checks: write
-         id-token: write
-         packages: write
-       strategy:
-           matrix:
-               cluster: [ dev-gcp,prod-gcp ]
-       environment: ${{ matrix.cluster }}:aap
-       name: Deploy til ${{ matrix.cluster }}
-       needs: bygg
-       runs-on: ubuntu-latest
-       env:
-           CLUSTER: ${{ matrix.cluster }}
-           IMAGE: ${{needs.bygg.outputs.image}}
-       steps:
-           - uses: actions/checkout@v3
-           - uses: nais/deploy/actions/deploy@master
+  deploy_to_prod:
+    name: Deploy to prod
+    if: github.event.pull_request.merged || github.event_name == 'push' || github.event.inputs.cluster == 'prod-gcp'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: prod-gcp
+          RESOURCE: nais.yaml
