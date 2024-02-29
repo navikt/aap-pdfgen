@@ -14,9 +14,9 @@ spec:
         - application: innsending
   resources:
     limits:
-      memory: 1024Mi
+      memory: 2048Mi
     requests:
-      memory: 1024Mi
+      memory: 2048Mi
   image: {{ image }}
   replicas:
     min: 2
