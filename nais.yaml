@@ -28,4 +28,4 @@ spec:
     path: /internal/is_ready
   prometheus:
     enabled: true
-    path: /prometheus
+    path: /internal/prometheus
