@@ -48,7 +48,6 @@ jobs:
     with:
       cluster: dev-gcp
       manifest: nais.yaml
-      tag: ${{ github.ref_name }}
 
   deploy_to_prod:
     name: Deploy to prod
@@ -62,4 +61,3 @@ jobs:
     with:
       cluster: prod-gcp
       manifest: nais.yaml
-      tag: ${{ github.ref_name }}
