@@ -61,3 +61,4 @@ jobs:
     with:
       cluster: prod-gcp
       manifest: nais.yaml
+      tag: ${{ github.ref_name }}
