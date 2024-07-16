@@ -9,8 +9,6 @@ spec:
   accessPolicy:
     inbound:
       rules:
-        - application: soknad-api
-        - application: soknad-konsument
         - application: innsending
   resources:
     limits:
