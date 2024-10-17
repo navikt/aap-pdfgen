@@ -14,12 +14,14 @@ spec:
     limits:
       memory: 2048Mi
     requests:
-      memory: 2048Mi
+      memory: 1024Mi
   image: {{ image }}
   replicas:
     min: 2
     max: 4
-    cpuThresholdPercentage: 80
+    scalingStrategy:
+      cpu:
+        thresholdPercentage: 80
   liveness:
     path: /internal/is_alive
   readiness:
