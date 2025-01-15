@@ -32,7 +32,7 @@
                 <div class="sendt">
                     {{# if kvittering.mottattdato}}
                         <p>
-                            Søknad mottatt<br/>{{iso_to_nor_datetime kvittering.mottattdato }}
+                            {{> type}} mottatt<br/>{{iso_to_nor_datetime kvittering.mottattdato }}
                         </p>
                     {{/if}}
                 </div>
