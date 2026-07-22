@@ -4,4 +4,4 @@ COPY templates /app/templates
 COPY fonts /app/fonts
 COPY resources /app/resources
 
-ENV JDK_JAVA_OPTIONS="-XX:MaxRAMPercentage=75.0 $JDK_JAVA_OPTIONS"
+ENV JDK_JAVA_OPTIONS="-XX:MaxRAMPercentage=75 $JDK_JAVA_OPTIONS"
