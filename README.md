@@ -1,4 +1,4 @@
-# aap-pdfgen
+# aap-pdfgen er deprekert og arkivert. Erstattet av https://github.com/navikt/aap-pdfgenerator
 
 PDF generator for arbeidsavklaringspenger. Kjør lokalt docker image med  `./run_development.sh`
 
